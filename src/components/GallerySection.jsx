@@ -49,7 +49,7 @@ function GallerySection() {
                 background: 'var(--color-white)',
                 boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
                 border: '1px solid var(--color-border)',
-                aspectRatio: '1 / 1', // Square aspect ratio for a uniform grid
+                aspectRatio: '1 / 1', 
                 position: 'relative',
               }}
             >

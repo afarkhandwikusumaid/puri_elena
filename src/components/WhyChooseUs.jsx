@@ -74,6 +74,21 @@ function WhyChooseUs() {
       </div>
 
       <style>{`
+        @media (max-width: 768px) {
+          #keunggulan-kami .grid-4 {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 1rem !important;
+          }
+          #keunggulan-kami .grid-4 > div {
+            padding: 1.5rem 1rem !important;
+          }
+          #keunggulan-kami h3 {
+            font-size: 0.85rem !important;
+          }
+          #keunggulan-kami p {
+            font-size: 0.75rem !important;
+          }
+        }
       `}</style>
     </section>
   );

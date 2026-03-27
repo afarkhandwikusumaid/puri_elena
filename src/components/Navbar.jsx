@@ -75,17 +75,7 @@ function Navbar() {
             ))}
           </ul>
 
-          {/* CTA — desktop */}
-          <a
-            href={`https://wa.me/${COMPANY.phone[0].wa}?text=Halo, saya tertarik dengan rumah Puri Elena Kalisalak`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold btn-sm nav-cta"
-            style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem' }}
-          >
-            <FiPhone size={13} />
-            Hubungi Kami
-          </a>
+
 
           {/* Hamburger — mobile */}
           <button

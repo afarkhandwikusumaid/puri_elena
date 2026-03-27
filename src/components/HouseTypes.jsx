@@ -64,7 +64,7 @@ function HouseTypeCard({ house }) {
       )}
 
       {/* House Image */}
-      <div style={{ position: 'relative', height: '240px' }}>
+      <div style={{ position: 'relative', height: '450px' }}>
         <img
           src={house.img}
           alt={house.label}
@@ -171,26 +171,6 @@ function HouseTypeCard({ house }) {
               ))}
             </div>
           )}
-        </div>
-
-        {/* CTA Buttons */}
-        <div style={{ display: 'flex', gap: '0.75rem', marginTop: 'auto' }}>
-          <a
-            href={`https://wa.me/${COMPANY.phone[0].wa}?text=Halo, saya tertarik dengan ${house.label} di Puri Elena Kalisalak. Bisa info lebih lanjut?`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-whatsapp"
-            style={{ flex: 1, justifyContent: 'center', textDecoration: 'none', fontSize: '0.85rem' }}
-          >
-            💬 WhatsApp
-          </a>
-          <button
-            onClick={() => document.querySelector('#kontak')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn btn-outline"
-            style={{ flex: 1, fontSize: '0.85rem' }}
-          >
-            Tanya Disini
-          </button>
         </div>
       </div>
     </motion.article>

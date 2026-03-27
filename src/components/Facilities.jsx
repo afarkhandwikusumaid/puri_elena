@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiHome, FiDroplet, FiTruck } from 'react-icons/fi';
+import { FiHome, FiDroplet, FiTruck, FiMap } from 'react-icons/fi';
 import { FACILITIES } from '../constants/data';
 
 // Icon per fasilitas — same index order as FACILITIES array
@@ -67,15 +67,40 @@ function Facilities() {
 
           {/* Right */}
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.3 }}>
-            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', height: '300px', marginBottom: '1.5rem' }}>
+            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', height: '320px', marginBottom: '1.5rem', boxShadow: '0 12px 30px rgba(0,0,0,0.08)' }}>
               <img
-                src="/rumah-subsidi-3060.png" alt="Rumah Puri Elena"
+                src="/site-plan.png" alt="Siteplan Puri Elena"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={e => { e.target.style.display = 'none'; e.target.parentElement.style.background = 'var(--color-primary-pale)'; }}
               />
             </div>
-
-
+            
+            <div style={{ 
+              background: 'var(--color-white)', 
+              padding: '1.5rem', 
+              borderRadius: 'var(--radius-md)', 
+              border: '1px solid var(--color-border)',
+              display: 'flex',
+              gap: '1.25rem',
+              alignItems: 'flex-start',
+              boxShadow: '0 4px 6px rgba(0,0,0,0.02)'
+            }}>
+              <div style={{
+                width: '44px', height: '44px', borderRadius: 'var(--radius-sm)',
+                background: 'var(--color-primary-pale)', color: 'var(--color-primary)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+              }}>
+                <FiMap size={22} />
+              </div>
+              <div>
+                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '0.4rem' }}>
+                  Siteplan Cluster Puri Elena
+                </h3>
+                <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
+                  Tata letak kawasan rapi dengan sistem cluster, jalan lingkungan yang lebar, serta ruang terbuka hijau asri untuk kenyamanan keluarga Anda.
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

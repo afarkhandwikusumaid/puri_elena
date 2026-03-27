@@ -4,7 +4,7 @@ import { FiArrowDown, FiMapPin, FiPhoneCall } from 'react-icons/fi';
 import { COMPANY, HOUSE_TYPES } from '../constants/data';
 
 const STATS = [
-  { value: '45+',      label: 'Unit Tersedia' },
+  { value: '60+',      label: 'Unit Tersedia' },
   { value: '2',        label: 'Tipe Rumah' },
   { value: '100%',     label: 'Legalitas SHM' },
   { value: 'Subsidi',  label: 'KPR Tersedia' },
