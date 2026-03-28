@@ -103,22 +103,6 @@ function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.button
-        onClick={() => document.querySelector('#tipe-rumah')?.scrollIntoView({ behavior: 'smooth' })}
-        animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2 }}
-        style={{
-          position: 'absolute', bottom: '1.75rem', left: '50%', transform: 'translateX(-50%)',
-          background: 'none', border: 'none', cursor: 'pointer',
-          color: 'rgba(255,255,255,0.4)', display: 'flex', flexDirection: 'column',
-          alignItems: 'center', gap: '0.3rem', zIndex: 1,
-        }}
-        aria-label="Scroll ke bawah"
-      >
-        <span style={{ fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase' }}>Scroll</span>
-        <FiArrowDown size={14} />
-      </motion.button>
-
       <style>{`
         @media (max-width: 600px) { .hero-stats { grid-template-columns: repeat(2, 1fr) !important; } }
       `}</style>
