@@ -27,7 +27,7 @@ function HouseTypeCard({ house }) {
   ];
 
   const cardBorder = house.highlight
-    ? '2px solid var(--color-gold)'
+    ? '2px solid var(--color-border)'
     : '1px solid var(--color-border)';
 
   return (

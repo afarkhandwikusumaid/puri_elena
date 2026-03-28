@@ -6,11 +6,10 @@ import { COMPANY } from '../constants/data';
 const fadeUp = { hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } };
 const stagger = { show: { transition: { staggerChildren: 0.1 } } };
 
-const INITIAL_FORM = { name: '', phone: '', type: '', message: '' };
+const INITIAL_FORM = { name: '', type: '', message: '' };
 
 /**
  * ContactSection — Form kontak + nomor WhatsApp Farkhan & Alan.
- * Tidak ada emoji — semua ikon dari react-icons/fi.
  */
 function ContactSection() {
   const ref    = useRef(null);
@@ -22,7 +21,7 @@ function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Halo, saya ${form.name}. Tertarik dengan ${form.type || 'rumah Puri Elena Kalisalak'}. No telp: ${form.phone}. Pesan: ${form.message}`;
+    const msg = `Halo, saya ${form.name}. Tertarik dengan ${form.type || 'rumah Puri Elena Kalisalak'}. Pesan: ${form.message}`;
     window.open(`https://wa.me/${COMPANY.phone[0].wa}?text=${encodeURIComponent(msg)}`, '_blank');
     setSent(true);
     setForm(INITIAL_FORM);
@@ -122,7 +121,6 @@ function ContactSection() {
             {/* Name & Phone */}
             {[
               { name: 'name',  label: 'Nama Lengkap',    type: 'text', placeholder: 'Nama Anda', required: true },
-              { name: 'phone', label: 'Nomor WhatsApp',  type: 'tel',  placeholder: '0812-xxxx-xxxx', required: true },
             ].map(f => (
               <div key={f.name} style={{ marginBottom: '1rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.4rem', color: 'var(--color-text)' }}>

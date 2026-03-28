@@ -7,9 +7,9 @@ const stagger = { show: { transition: { staggerChildren: 0.1 } } };
 const GALLERY_IMAGES = [
   { src: '/galeri/dapur.jpg', alt: 'Dapur Puri Elena' },
   { src: '/galeri/dapurr.jpg', alt: 'Dapur' },
-  { src: '/galeri/ruang belakang.jpg', alt: 'Ruang Belakang' },
+  { src: '/galeri/ruangbelakang.jpg', alt: 'Ruang Belakang' },
   { src: '/galeri/ruangan.jpg', alt: 'Ruangan' },
-  { src: '/galeri/ryang tengah.jpg', alt: 'Ruang Tengah' },
+  { src: '/galeri/ruangtengah.jpg', alt: 'Ruang Tengah' },
 ];
 
 function GallerySection() {
@@ -62,8 +62,6 @@ function GallerySection() {
                   objectFit: 'cover', 
                   transition: 'transform 0.3s ease' 
                 }}
-                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
               />
             </motion.div>
           ))}
