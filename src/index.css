@@ -107,8 +107,8 @@ ul { list-style: none; }
 .hero-content-wrapper {
   position: relative;
   z-index: 1;
-  padding-top: clamp(6rem, 15vh, 8rem);
-  padding-bottom: clamp(2.5rem, 5vh, 4rem);
+  padding-top: clamp(6rem, 15vh, 8rem) !important;
+  padding-bottom: clamp(2.5rem, 5vh, 4rem) !important;
 }
 
 .house-img-wrap {
