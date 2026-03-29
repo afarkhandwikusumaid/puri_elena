@@ -20,15 +20,17 @@ function Facilities() {
 
           {/* Left */}
           <motion.div initial="hidden" animate={inView ? 'show' : 'hidden'} variants={stagger}>
-            <motion.span variants={fadeUp} className="label-tag">Fasilitas</motion.span>
-            <motion.h2 variants={fadeUp} className="section-title">
-              Fasilitas <span>Lengkap</span>,<br />Harga Terjangkau
-            </motion.h2>
-            <div className="divider-gold" />
-            <motion.p variants={fadeUp} className="section-subtitle" style={{ marginBottom: '1.75rem' }}>
-              Setiap unit di Puri Elena Kalisalak dilengkapi fasilitas standar
-              untuk kebutuhan keluarga modern Indonesia.
-            </motion.p>
+            <div className="fac-text-header">
+              <motion.span variants={fadeUp} className="label-tag">Fasilitas</motion.span>
+              <motion.h2 variants={fadeUp} className="section-title">
+                Fasilitas Lengkap &<span><br />Harga Terjangkau</span>
+              </motion.h2>
+              <div className="divider-gold" />
+              <motion.p variants={fadeUp} className="section-subtitle" style={{ marginBottom: '1.75rem' }}>
+                Setiap unit di Puri Elena Kalisalak dilengkapi fasilitas standar
+                untuk kebutuhan keluarga modern Indonesia.
+              </motion.p>
+            </div>
 
             <motion.div variants={stagger} style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {FACILITIES.map((fac, i) => {
@@ -105,7 +107,13 @@ function Facilities() {
         </div>
       </div>
 
-      <style>{` @media (max-width: 768px) { .fac-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } } `}</style>
+      <style>{`
+        @media (max-width: 768px) { 
+          .fac-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } 
+          .fac-text-header { text-align: center; display: flex; flex-direction: column; align-items: center; }
+          .fac-text-header .divider-gold { margin-left: auto; margin-right: auto; }
+        } 
+      `}</style>
     </section>
   );
 }
