@@ -104,6 +104,33 @@ ul { list-style: none; }
   padding: var(--space-2xl) 0;
 }
 
+.hero-content-wrapper {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(6rem, 15vh, 8rem);
+  padding-bottom: clamp(2.5rem, 5vh, 4rem);
+}
+
+.house-img-wrap {
+  position: relative;
+  height: clamp(240px, 45vw, 450px);
+}
+
+.siteplan-img-wrap {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 320px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .siteplan-img-wrap {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
 /* ── Section Labels ── */
 .label-tag {
   display: inline-flex;

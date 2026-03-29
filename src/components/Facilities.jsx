@@ -67,7 +67,7 @@ function Facilities() {
 
           {/* Right */}
           <motion.div initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ delay: 0.3 }}>
-            <div style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', height: '320px', marginBottom: '1.5rem', boxShadow: '0 12px 30px rgba(0,0,0,0.08)' }}>
+            <div className="siteplan-img-wrap">
               <img
                 src="/site-plan.png" alt="Siteplan Puri Elena"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}

@@ -64,7 +64,7 @@ function HouseTypeCard({ house }) {
       )}
 
       {/* House Image */}
-      <div style={{ position: 'relative', height: '450px' }}>
+      <div className="house-img-wrap">
         <img
           src={house.img}
           alt={house.label}

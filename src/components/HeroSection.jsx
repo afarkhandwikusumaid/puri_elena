@@ -25,7 +25,7 @@ function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container" style={{ position: 'relative', zIndex: 1, paddingBottom: '4rem', paddingTop: '8rem' }}>
+      <div className="container hero-content-wrapper">
         <div style={{ maxWidth: '720px' }}>
 
           {/* Location badge */}

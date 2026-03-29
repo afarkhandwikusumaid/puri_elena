@@ -76,8 +76,8 @@ function GallerySection() {
         }
         @media (max-width: 768px) {
           .gallery-grid {
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
           }
         }
       `}</style>
