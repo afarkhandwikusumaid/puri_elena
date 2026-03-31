@@ -8,11 +8,6 @@ const stagger = { show: { transition: { staggerChildren: 0.12 } } };
 
 const STEP_ICONS = [FiPhoneCall, FiMapPin, FiCreditCard, FiKey];
 
-/**
- * HowToBuy — Langkah-langkah cara pembelian unit Puri Elena.
- * Desktop: 4 kolom sejajar (grid)
- * Mobile: Vertical timeline dengan icon kotak lembut (meniru referensi gambar user)
- */
 function HowToBuy() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });

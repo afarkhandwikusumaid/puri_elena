@@ -12,10 +12,9 @@ export const COMPANY = {
     'Rumah minimalis 1 lantai dengan bangunan baru, kamar tidur yang luas dan garasi. Lokasi strategis di Kemloko, Kalisalak Atas, Kabupaten Batang, Jawa Tengah.',
   address: 'Kemloko, Kalisalak Atas, Kab. Batang, Jawa Tengah',
   phone: [
-    { name: 'Farkhan', number: '0859-4462-9716', wa: '6285944629716' },
     { name: 'Alan',    number: '0857-1301-9019', wa: '6285713019019' },
   ],
-  email: 'info@purielena-kalisalak.id',
+  email: 'purielena@gmail,com',
   officeHours: 'Senin – Sabtu, 08.00 – 17.00 WIB',
   maps: 'https://maps.google.com/?q=Kalisalak+Atas+Batang',
 };
@@ -38,6 +37,7 @@ export const HOUSE_TYPES = [
     img: '/rumah-subsidi-3060.png',
     color: '#1B5E4B',
     highlight: false,
+    description: 'Tipe Subsidi Puri Elena terjamin sangat nyaman dan asri untuk keluarga Anda. Dilengkapi dengan berbagai fasilitas pendukung dengan harga yang sangat terjangkau.',
     features: [
       'Ruang tamu & ruang keluarga',
       '2 kamar tidur luas',
@@ -64,6 +64,7 @@ export const HOUSE_TYPES = [
     img: '/rumah-premium-4084.png',
     color: '#c9a84c',
     highlight: true,
+    description: 'Tipe Premium Puri Elena dirancang untuk Anda yang menginginkan ruang hidup lebih lapang dan elegan, dengan kualitas spesifikasi bangunan terbaik di kelasnya.',
     features: [
       'Ruang tamu & keluarga lebih luas',
       '2 kamar tidur ekstra luas',
@@ -80,7 +81,7 @@ export const HOUSE_TYPES = [
 export const FACILITIES = [
   { label: '2 Kamar Tidur',  desc: 'Kamar tidur luas & nyaman' },
   { label: '1 Kamar Mandi',  desc: 'Kamar mandi bersih modern' },
-  { label: 'Garasi',          desc: 'Garasi untuk 1 kendaraan' },
+  { label: 'Garasi',          desc: 'Garasi untuk 2 kendaraan' },
 ];
 
 // ─── ADVANTAGES ──────────────────────────────────────────────────────────────
@@ -156,15 +157,15 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     q: 'Apakah tersedia KPR Subsidi?',
-    a: 'Ya, tersedia KPR Subsidi BPJS Ketenagakerjaan, KPR BTN, dan bank rekanan lainnya. Hubungi marketing untuk informasi program terbaru.',
+    a: 'Ya, tersedia KPR Subsidi dengan Rumah Type 30/60, KPR BTN Konvensional, dan BSN, Hubungi marketing untuk informasi program tersebut.',
   },
   {
     q: 'Berapa uang muka (DP) minimal?',
-    a: 'DP minimal sesuai kebijakan bank. Untuk KPR Subsidi bisa sangat ringan. Hubungi kami untuk simulasi KPR sesuai penghasilan Anda.',
+    a: 'DP minimal sesuai kebijakan developer. Untuk KPR Subsidi bisa sangat terjangkau, Hubungi marketing untuk informasi program tersebut.',
   },
   {
     q: 'Apakah bangunan sudah jadi atau indent?',
-    a: 'Unit ready stock tersedia. Ada juga pilihan indent untuk unit-unit tertentu. Segera booking agar dapat unit pilihan terbaik.',
+    a: 'Unit indent dan bisa menyesuaikan request pembeli, Segera booking agar dapat unit pilihan terbaik.',
   },
   {
     q: 'Apa saja bonus yang didapat?',

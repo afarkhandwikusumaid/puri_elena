@@ -5,11 +5,16 @@ const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } };
 const stagger = { show: { transition: { staggerChildren: 0.1 } } };
 
 const GALLERY_IMAGES = [
-  { src: '/galeri/dapur.jpg', alt: 'Dapur Puri Elena' },
-  { src: '/galeri/dapurr.jpg', alt: 'Dapur' },
-  { src: '/galeri/ruangbelakang.jpg', alt: 'Ruang Belakang' },
-  { src: '/galeri/ruangan.jpg', alt: 'Ruangan' },
-  { src: '/galeri/ruangtengah.jpg', alt: 'Ruang Tengah' },
+  { src: '/galeri/premium1.jpg', alt: 'Premium 1', type: 'Premium' },
+  { src: '/galeri/premium2.jpg', alt: 'Premium 2', type: 'Premium' },
+  { src: '/galeri/premium3.jpg', alt: 'Premium 3', type: 'Premium' },
+  { src: '/galeri/premium4.jpg', alt: 'Premium 4', type: 'Premium' },
+  { src: '/galeri/premium5.jpg', alt: 'Premium 5', type: 'Premium' },
+  { src: '/galeri/subsidi1.jpeg', alt: 'Subsidi 1', type: 'Subsidi' },
+  { src: '/galeri/subsidi2.jpeg', alt: 'Subsidi 2', type: 'Subsidi' },
+  { src: '/galeri/subsidi3.jpeg', alt: 'Subsidi 3', type: 'Subsidi' },
+  { src: '/galeri/subsidi4.jpeg', alt: 'Subsidi 4', type: 'Subsidi' },
+  { src: '/galeri/subsidi5.jpeg', alt: 'Subsidi 5', type: 'Subsidi' },
 ];
 
 function GallerySection() {
@@ -34,38 +39,72 @@ function GallerySection() {
           </motion.p>
         </motion.div>
 
-        {/* Gallery Grid */}
-        <motion.div
-          initial="hidden" animate={inView ? 'show' : 'hidden'} variants={stagger}
-          className="gallery-grid"
-        >
-          {GALLERY_IMAGES.map((img, i) => (
-            <motion.div
-              key={i} variants={fadeUp}
-              className="gallery-item"
-              style={{
-                borderRadius: 'var(--radius-md)', 
-                overflow: 'hidden', 
-                background: 'var(--color-white)',
-                boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
-                border: '1px solid var(--color-border)',
-                aspectRatio: '1 / 1', 
-                position: 'relative',
-              }}
-            >
-              <img
-                src={img.src} 
-                alt={img.alt}
-                style={{ 
-                  width: '100%', 
-                  height: '100%', 
-                  objectFit: 'cover', 
-                  transition: 'transform 0.3s ease' 
+        {/* Gallery Sections */}
+        {['Premium', 'Subsidi'].map((type, index) => {
+          const typeImages = GALLERY_IMAGES.filter(img => img.type === type);
+          if (typeImages.length === 0) return null;
+
+          return (
+            <div key={type} style={{ marginBottom: index === 0 ? '4rem' : '0' }}>
+              <motion.div
+                initial="hidden" animate={inView ? 'show' : 'hidden'} variants={fadeUp}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '1.5rem',
+                  gap: '1rem'
                 }}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+              >
+                <div style={{
+                  width: '4px',
+                  height: '24px',
+                  background: type === 'Premium' ? 'var(--color-gold)' : 'var(--color-primary)',
+                  borderRadius: '2px'
+                }} />
+                <h3 style={{ 
+                  fontSize: '1.4rem', 
+                  fontFamily: '"Playfair Display", serif', 
+                  color: 'var(--color-text)',
+                  margin: 0
+                }}>
+                  Galeri {type}
+                </h3>
+              </motion.div>
+
+              <motion.div
+                initial="hidden" animate={inView ? 'show' : 'hidden'} variants={stagger}
+                className="gallery-grid"
+              >
+                {typeImages.map((img, i) => (
+                  <motion.div
+                    key={i} variants={fadeUp}
+                    className="gallery-item"
+                    style={{
+                      borderRadius: 'var(--radius-md)', 
+                      overflow: 'hidden', 
+                      background: 'var(--color-white)',
+                      boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+                      border: '1px solid var(--color-border)',
+                      aspectRatio: '1 / 1', 
+                      position: 'relative',
+                    }}
+                  >
+                    <img
+                      src={img.src} 
+                      alt={img.alt}
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover', 
+                        transition: 'transform 0.3s ease' 
+                      }}
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+          );
+        })}
       </div>
 
       <style>{`

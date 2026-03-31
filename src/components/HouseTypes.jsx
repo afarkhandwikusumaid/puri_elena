@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { HOUSE_TYPES, COMPANY } from '../constants/data';
-import { FiHome, FiDroplet, FiMaximize2, FiCheck, FiTruck } from 'react-icons/fi';
+import { FiHome, FiDroplet, FiMaximize2, FiCheck, FiTruck, FiSun } from 'react-icons/fi';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -19,12 +19,7 @@ const stagger = {
 function HouseTypeCard({ house }) {
   const [activeTab, setActiveTab] = useState('fitur');
 
-  const specItems = [
-    { icon: <FiHome size={14} />, label: `${house.beds} Kamar Tidur` },
-    { icon: <FiDroplet size={14} />, label: `${house.baths} Kamar Mandi` },
-    { icon: <FiTruck size={14} />, label: `${house.garage} Garasi` },
-    { icon: <FiMaximize2 size={14} />, label: house.lbLt },
-  ];
+
 
   const cardBorder = house.highlight
     ? '2px solid var(--color-border)'
@@ -107,14 +102,11 @@ function HouseTypeCard({ house }) {
           </p>
         </div>
 
-        {/* Quick Specs */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-          {specItems.map((spec, i) => (
-            <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', fontSize: '0.8rem', color: 'var(--color-text-muted)', background: 'var(--color-bg)', padding: '0.35rem 0.75rem', borderRadius: '6px' }}>
-              <span style={{ color: 'var(--color-primary)' }}>{spec.icon}</span>
-              {spec.label}
-            </div>
-          ))}
+        {/* Description Text */}
+        <div style={{ flex: 1 }}>
+          <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.6', margin: 0 }}>
+            {house.description}
+          </p>
         </div>
 
         {/* Tab: Fitur / Spesifikasi */}

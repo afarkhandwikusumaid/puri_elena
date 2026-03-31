@@ -46,13 +46,14 @@ function Footer() {
             </p>
             <div style={{ display: 'flex', gap: '0.5rem' }}>
               {[
-                { Icon: FiInstagram, label: 'Instagram' },
-                { Icon: FiFacebook,  label: 'Facebook' },
-                { Icon: FiYoutube,   label: 'YouTube' },
-              ].map(({ Icon, label }) => (
+                { Icon: FiInstagram, label: 'Instagram', url: 'https://www.instagram.com/perumahan.puri.elena/' },
+                { Icon: FiFacebook,  label: 'Facebook', url: '' },
+                { Icon: FiYoutube,   label: 'YouTube', url: '' },
+              ].map(({ Icon, label, url }) => (
                 <button
                   key={label}
                   aria-label={label}
+                  onClick={() => window.open(url, '_blank')}
                   style={{
                     width: '36px', height: '36px', borderRadius: '50%', cursor: 'pointer',
                     border: '1px solid rgba(201,168,76,0.25)', background: 'transparent',

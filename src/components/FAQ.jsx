@@ -6,9 +6,6 @@ import { FAQS, COMPANY } from '../constants/data';
 const fadeUp = { hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0 } };
 const stagger = { show: { transition: { staggerChildren: 0.08 } } };
 
-/**
- * FAQ — Accordion FAQ bersih tanpa emoji. Layout 1 kolom ditengah.
- */
 function FAQ() {
   const ref    = useRef(null);
   const inView  = useInView(ref, { once: true, margin: '-80px' });
