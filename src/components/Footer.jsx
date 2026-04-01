@@ -3,15 +3,7 @@ import { FiInstagram, FiFacebook, FiYoutube, FiMapPin, FiPhone, FiMail } from 'r
 import Logo from './Logo';
 import { COMPANY } from '../constants/data';
 
-const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 
-const NAV_LINKS = [
-  { label: 'Beranda',      id: '#hero' },
-  { label: 'Tentang Kami', id: '#tentang-kami' },
-  { label: 'Tipe Rumah',   id: '#tipe-rumah' },
-  { label: 'Fasilitas',    id: '#fasilitas' },
-  { label: 'Kontak',       id: '#kontak' },
-];
 
 const linkStyle = {
   background: 'none', border: 'none',
@@ -36,7 +28,7 @@ function Footer() {
       <div className="container" style={{ padding: '4rem 2rem 2rem' }}>
 
         {/* Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1.5fr', gap: '3rem', marginBottom: '3rem' }} className="footer-grid">
+        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1.5fr 1.2fr', gap: '3rem', marginBottom: '3rem' }} className="footer-grid">
 
           {/* Brand */}
           <div>
@@ -69,22 +61,31 @@ function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Map Location */}
           <div>
-            <h4 style={headingStyle}>Navigasi</h4>
-            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem' }}>
-              {NAV_LINKS.map(link => (
-                <li key={link.label}>
-                  <button
-                    onClick={() => scrollTo(link.id)} style={linkStyle}
-                    onMouseEnter={e => (e.target.style.color = 'var(--color-gold)')}
-                    onMouseLeave={e => (e.target.style.color = 'rgba(255,255,255,0.45)')}
-                  >
-                    {link.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
+            <h4 style={headingStyle}>Lokasi Kami</h4>
+            <div style={{ borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(201,168,76,0.25)' }}>
+              <iframe
+                src="https://maps.google.com/maps?q=-6.9279474,109.713155&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="180"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Peta Lokasi Puri Elena"
+              ></iframe>
+            </div>
+            <a 
+              href="https://www.google.com/maps/search/perumahan+puri+elena+batang/@-6.9279474,109.713155,14.07z?entry=ttu&g_ep=EgoyMDI2MDMzMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', marginTop: '0.8rem', fontSize: '0.8rem', color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.2s', fontFamily: 'var(--font-sans)' }}
+              onMouseEnter={e => e.target.style.color = 'var(--color-gold)'}
+              onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.6)'}
+            >
+              Buka di Google Maps <FiMapPin size={12} />
+            </a>
           </div>
 
           {/* Contact */}
