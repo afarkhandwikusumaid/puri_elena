@@ -96,7 +96,7 @@ function Facilities() {
               </div>
               <div>
                 <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text)', marginBottom: '0.4rem' }}>
-                  Siteplan Cluster Puri Elena
+                  Siteplan Puri Elena
                 </h3>
                 <p style={{ fontSize: '0.88rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
                   Tata letak kawasan rapi dengan sistem cluster, jalan lingkungan yang lebar, serta ruang terbuka hijau asri untuk kenyamanan keluarga Anda.

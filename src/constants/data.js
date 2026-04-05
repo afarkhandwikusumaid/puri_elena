@@ -12,7 +12,8 @@ export const COMPANY = {
     'Rumah minimalis 1 lantai dengan bangunan baru, kamar tidur yang luas dan garasi. Lokasi strategis di Kemloko, Kalisalak Atas, Kabupaten Batang, Jawa Tengah.',
   address: 'Kemloko, Kalisalak Atas, Kab. Batang, Jawa Tengah',
   phone: [
-    { name: 'Alan',    number: '0857-1301-9019', wa: '6285713019019' },
+    { name: 'Alan',    number: '0823-3682-0782', wa: '6282336820782' },
+    { name: 'Jody',    number: '0858-6894-4912', wa: '6285868944912' },
   ],
   email: 'purielena@gmail,com',
   officeHours: 'Senin – Sabtu, 08.00 – 17.00 WIB',
@@ -96,7 +97,7 @@ export const ADVANTAGES = [
   },
   {
     title: 'Legalitas Terjamin',
-    desc: 'Sertifikat Hak Milik (SHM) dan IMB lengkap. Aman dan legal 100%.',
+    desc: 'Sertifikat Hak Milik (SHM) lengkap. Aman dan legal 100%.',
   },
   {
     title: 'Kualitas Bangunan',
@@ -169,7 +170,7 @@ export const FAQS = [
   },
   {
     q: 'Apa saja bonus yang didapat?',
-    a: 'Setiap pembelian unit mendapatkan FREE kitchen set ATAU kanopi (pilih salah satu), serta SHM dan IMB atas nama pembeli.',
+    a: 'Setiap pembelian unit mendapatkan FREE kitchen set / kanopi, serta SHM atas nama pembeli.',
   },
   {
     q: 'Bagaimana cara survey lokasi?',
